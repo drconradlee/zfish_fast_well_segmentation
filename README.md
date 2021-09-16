@@ -13,9 +13,9 @@ conda env create -f environment.yml -n well_segmentation
 <p> </p>
 <p> Alternatively, you can install each depedencies individually: </p>
 <ul>
-    <li> openCV </li> 
-    <li> argparse </li> 
     <li> numpy </li> 
+    <li> argparse </li> 
+    <li> opencv </li> 
     <li> ffmpeg-python </li>
 </ul>
   
