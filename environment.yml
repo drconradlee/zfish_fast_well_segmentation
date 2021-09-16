@@ -1,4 +1,7 @@
-name: null
-channels:
-  - defaults
-prefix: C:\Users\uqclee23\Documents\Scott_Lab
+name: well_segmentation
+dependencies:
+    - python>=3.6
+    - ffmpeg-python
+    - numpy>=1.17
+    - opencv>=3.4
+    - pip
