@@ -1,1 +1,1 @@
-# zfish_fast_well_segmentation
+# Fast Well segmentation for zebrafish behaviour
