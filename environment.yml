@@ -1,7 +1,7 @@
 name: well_segmentation
 dependencies:
     - python>=3.6
-    - ffmpeg-python
+    - ffmpeg
     - numpy>=1.17
     - opencv>=3.4
     - pip
