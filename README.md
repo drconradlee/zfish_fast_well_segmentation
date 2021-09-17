@@ -17,6 +17,7 @@ conda env create -f environment.yml -n well_segmentation
     <li> argparse </li> 
     <li> opencv </li> 
     <li> ffmpeg-python </li>
+    <li> multiprocessing </li>
 </ul>
   
 
