@@ -34,12 +34,12 @@ To run, simply input:
 <p> </p>
 
 ```
-python compress_and_seg.py -p <path_to_folder> -n 16 -f 0.1 -c auto -tt circle -pp <path_to_json_params> 
+python compress_and_seg.py -d <path_to_folder> -p 20 -min 100 -max 150 -f 2000 
 ```
 
 where:
 <ul>
-    <li> <strong> -n : </strong> number of wells </li> 
+    <li> <strong> -f : </strong> reference frame </li> 
     <li> <strong> -min: </strong> estimated minimium well diameter in pixel </li> 
     <li> <strong> -max: </strong> estimate maxiumium well diameter in pixel </li> 
     <li> <strong> -d: </strong> directory of avi videos </li>
