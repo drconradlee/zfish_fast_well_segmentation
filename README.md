@@ -1,6 +1,6 @@
 # Fast well segmentation for Zebrafish Behaviour
 
-Module + executable for segmenting wells for further video processing. The aim of the script is to compression of raw avi files and crop multi-well videos into single well videos for tracking analysis. The code is optimized for compressing and processing multiple short videos. There is no speed advantage if you are processing a single large video file.
+Module + executable for segmenting wells for further video processing. The aim of the script is to compression raw avi files and crop multi-well videos into single well videos for tracking analysis. The code is optimized for compressing and processing multiple short videos. There is no speed advantage if you are processing a single large video file.
 
 <h2> Installation </h2>
 You can install all required packages by creating an environment with all dependencies with the included `environment.yml` file.
