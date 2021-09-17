@@ -22,7 +22,7 @@ conda env create -f environment.yml -n well_segmentation
   
 
 <h2> Activating the environment </h2>
-If you are running the script through the installed envionemnt, simply activate the environment and the set the current directory.
+If you are running the script through the installed envionemnt, simply activate the environment and set the current directory.
 <p> </p>
 
 ```
