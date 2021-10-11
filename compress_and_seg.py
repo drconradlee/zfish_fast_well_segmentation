@@ -37,7 +37,12 @@ if __name__ == '__main__':
                     "--target_num_wells",
                     required=True,
                     help='Expected Number of wells',
-                    default = 16)                                        
+                    default=16)              
+    AP.add_argument("-t",
+                    "--row_threshold",
+                    required=True,
+                    help='Well to well row tolerance',
+                    default = 50)                          
     ARGS = vars(AP.parse_args())
     directory = ARGS['folder_path']
     min_pad = int(ARGS['padding'])
@@ -45,6 +50,7 @@ if __name__ == '__main__':
     max_well = int(ARGS['max_well_size'])
     examine_frame = int(ARGS['sample_frame'])
     target_num_well = int(ARGS['target_num_wells'])
+    row_thr = int(ARGS['row_threshold'])
 
     # Run through the folder and get all the avi names
     file_list = [];
@@ -61,7 +67,7 @@ if __name__ == '__main__':
     print(' ')
     print('Detecting Wells...')
     print('-----------------------------------------------')
-    num_wells,all_coord = detect_and_export(file_list,examine_frame,min_well,max_well,min_pad,target_num_well)
+    num_wells,all_coord = detect_and_export(file_list,examine_frame,min_well,max_well,min_pad,target_num_well,row_thr)
     print(' ')
     print('CHECK WELL-DETECTION OUTPUT TO COMFIRM')
     print('###############################################')
@@ -79,4 +85,5 @@ if __name__ == '__main__':
         jobs.append(p)
         p.start()
     
-        
+    print(' ')
+    print('Congratulations! Your videos have been compressed and segmented!')

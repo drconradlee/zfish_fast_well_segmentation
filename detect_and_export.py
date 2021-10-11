@@ -3,8 +3,9 @@ import cv2
 import os
 import sys
 from align_coordinates import order_coordinates
+from sort_wells import sort_wells
 
-def detect_and_export(file_list,examine_frame,min_well,max_well,min_pad,target_num_well):
+def detect_and_export(file_list,examine_frame,min_well,max_well,min_pad,target_num_well,row_thr):
     num_wells = []
     all_coord =[]
     for video in np.arange(np.shape(file_list)[0]):
@@ -17,7 +18,7 @@ def detect_and_export(file_list,examine_frame,min_well,max_well,min_pad,target_n
         circles = np.uint16(np.around(circles))
         num_wells.append(np.shape(circles[0,:,0]))
         print('File #' + str(video+1) + ' ; Number of wells detected: ' + str(num_wells[video][0]))
-        sorted_circles = order_coordinates(target_num_well,circles)
+        sorted_circles = sort_wells(circles,row_thr)
         for idx,i in enumerate(sorted_circles):
             cv2.circle(frame,(i[0],i[1]),i[2],(0,255,0),2)
             cv2.circle(frame,(i[0],i[1]),2,(0,0,255),3)
