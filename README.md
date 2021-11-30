@@ -34,7 +34,7 @@ To run, simply input:
 <p> </p>
 
 ```
-python compress_and_seg.py -d <path_to_folder> -p 20 -min 100 -max 150 -f 2000 
+python compress_and_seg.py -d <path_to_folder> -p 5 -min 100 -max 150 -f 2000 -n 16 -t 50
 ```
 
 where:
@@ -44,5 +44,7 @@ where:
     <li> <strong> -max: </strong> estimate maxiumium well diameter in pixel </li> 
     <li> <strong> -d: </strong> directory of avi videos </li>
     <li> <strong> -p: </strong> padding in pixels desired around the well </li>
+    <li> <strong> -n: target number of wells </li>
+    <li><strong> -t: threshold between rows (important for non-rectalinear arrangement) </li>
 </ul>
 
