@@ -56,7 +56,7 @@ where:
     <li> <strong> -max: </strong> estimate maxiumium well diameter in pixel </li> 
     <li> <strong> -d: </strong> directory of avi videos </li>
     <li> <strong> -p: </strong> padding in pixels desired around the well </li>
-    <li> <strong> -n: target number of wells </li>
-    <li><strong> -t: threshold between rows (important for non-rectalinear arrangement) </li>
+    <li> <strong> -n: </strong> target number of wells </li>
+    <li> <strong> -t: </strong> threshold between rows (important for non-rectalinear arrangement) </li>
 </ul>
 
