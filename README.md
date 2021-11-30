@@ -29,6 +29,18 @@ If you are running the script through the installed envionemnt, simply activate 
 conda activate well_segmentation
 ```
 
+
+<h2> Change your current directory to code location </h2>
+If you have installed the segmentation code else where, you need to change the current directory. For TUNA, file is located in D:/.
+<p> </p>
+
+```
+D:
+```
+```
+cd D:\Workspace_repose\well_segmentation
+```
+
 <h2> Script Inputs </h2>
 To run, simply input:
 <p> </p>
