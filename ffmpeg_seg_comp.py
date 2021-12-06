@@ -24,7 +24,7 @@ def run_segmentation(file_list,file_num,all_coord,num_wells):
             target_file = os.path.join(target_dir,base_name + '_well_' + str(well+1) + '.avi')
 
             stream = ffmpeg.output(stream, target_file, **{'c:v': 'libx264rgb'},\
-                                  minrate='4000k', maxrate='4000k', preset='medium', crf=10, f='avi')
+                                  minrate='4000k', maxrate='4000k', preset='medium', crf=12, f='avi')
             stream = ffmpeg.overwrite_output(stream)
             ffmpeg.run(stream,capture_stdout=True, capture_stderr=True)
         except ffmpeg.Error as e:

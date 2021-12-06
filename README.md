@@ -29,24 +29,12 @@ If you are running the script through the installed envionemnt, simply activate 
 conda activate well_segmentation
 ```
 
-
-<h2> Change your current directory to code location </h2>
-If you have installed the segmentation code else where, you need to change the current directory. For TUNA, file is located in D:/.
-<p> </p>
-
-```
-D:
-```
-```
-cd D:\Workspace_repose\well_segmentation
-```
-
 <h2> Script Inputs </h2>
 To run, simply input:
 <p> </p>
 
 ```
-python compress_and_seg.py -d <path_to_folder> -p 5 -min 100 -max 150 -f 2000 -n 16 -t 50
+python compress_and_seg.py -d <path_to_folder> -p 20 -min 100 -max 150 -f 2000 
 ```
 
 where:
@@ -56,7 +44,5 @@ where:
     <li> <strong> -max: </strong> estimate maxiumium well diameter in pixel </li> 
     <li> <strong> -d: </strong> directory of avi videos </li>
     <li> <strong> -p: </strong> padding in pixels desired around the well </li>
-    <li> <strong> -n: </strong> target number of wells </li>
-    <li> <strong> -t: </strong> threshold between rows (important for non-rectalinear arrangement) </li>
 </ul>
 
