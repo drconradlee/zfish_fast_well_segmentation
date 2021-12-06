@@ -11,15 +11,7 @@ conda env create -f environment.yml -n well_segmentation
 ```
 
 <p> </p>
-<p> Alternatively, you can install each depedencies individually: </p>
-<ul>
-    <li> numpy </li> 
-    <li> argparse </li> 
-    <li> opencv </li> 
-    <li> ffmpeg-python </li>
-    <li> multiprocessing </li>
-</ul>
-  
+ 
 
 <h2> Activating the environment </h2>
 If you are running the script through the installed envionemnt, simply activate the environment and set the current directory.
@@ -34,15 +26,16 @@ To run, simply input:
 <p> </p>
 
 ```
-python compress_and_seg.py -d <path_to_folder> -p 20 -min 100 -max 150 -f 2000 
+python compress_and_seg.py -d <path_to_folder> -n 16 
 ```
-
-where:
+If errors are encounters, other input variable are avaliable to fine tune the segmentation.
+Where:
 <ul>
-    <li> <strong> -f : </strong> reference frame </li> 
-    <li> <strong> -min: </strong> estimated minimium well diameter in pixel </li> 
-    <li> <strong> -max: </strong> estimate maxiumium well diameter in pixel </li> 
-    <li> <strong> -d: </strong> directory of avi videos </li>
-    <li> <strong> -p: </strong> padding in pixels desired around the well </li>
+    <li> <strong> -f : </strong> Reference frame </li> 
+    <li> <strong> -min: </strong> Estimated minimium well diameter in pixel </li> 
+    <li> <strong> -max: </strong> Estimated maxiumium well diameter in pixel </li> 
+    <li> <strong> -d: </strong> Directory of avi videos </li>
+    <li> <strong> -p: </strong> Padding in pixels desired around the well </li>
+    <li> <strong> -t: </strong> Threshold hold between rows of wells </li>
 </ul>
 
