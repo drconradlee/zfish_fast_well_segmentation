@@ -19,7 +19,10 @@ If you are running the script through the installed envionemnt, simply activate 
 
 ```
 conda activate well_segmentation
+cd <directory of compress_and_seg.py>
 ```
+
+
 
 <h2> Script Inputs </h2>
 To run, simply input:
