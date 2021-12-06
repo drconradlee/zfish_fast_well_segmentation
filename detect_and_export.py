@@ -13,16 +13,22 @@ def detect_and_export(file_list,examine_frame,min_well,max_well,min_pad,target_n
         cap.set(1,examine_frame)
         ret, frame = cap.read()
         img = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-        circles = cv2.HoughCircles(img,cv2.HOUGH_GRADIENT,1,20,
-                                param1=50,param2=30,minRadius=min_well,maxRadius=max_well)
-        circles = np.uint16(np.around(circles))
+        current_num_well = []
+        while current_num_well != target_num_well:
+            circles = cv2.HoughCircles(img,cv2.HOUGH_GRADIENT,1,20,
+                                    param1=50,param2=30,minRadius=min_well,maxRadius=max_well)
+            circles = np.uint16(np.around(circles))
+            current_num_well = np.shape(circles[0])[0]
+            if current_num_well == target_num_well:
+                break
+            elif current_num_well != target_num_well:
+                max_well = (int(np.round(np.mean(circles[0][:,2])))+10)
+                min_well = (int(np.round(np.mean(circles[0][:,2])))-10)
         num_wells.append(np.shape(circles[0,:,0]))
-        print('File #' + str(video+1) + ' ; Number of wells detected: ' + str(num_wells[video][0]))
-        if target_num_well < 16:
-            sorted_circles = sort_wells(circles,row_thr)
-        else:
-            sorted_circles = order_coordinates(16,circles)
-            
+
+        print('File #' + str(video+1) + '-       Number of wells detected: ' + str(num_wells[video][0]))
+        sorted_circles = sort_wells(circles,row_thr)
+        
         for idx,i in enumerate(sorted_circles):
             cv2.circle(frame,(i[0],i[1]),i[2],(0,255,0),2)
             cv2.circle(frame,(i[0],i[1]),2,(0,0,255),3)

@@ -4,9 +4,9 @@ import os
 
 def run_segmentation(file_list,file_num,all_coord,num_wells):
     for well in np.arange(num_wells[file_num][0]):
-        print(f'File Progress: {file_num+1}  (currently Working on well: {well+1}) ...')
+        print(f'File Progress: {file_num+1}  (Currently Working on Well: {well+1}) ...')
         prog_length = 100;
-        prog_percent = well/(num_wells[file_num][0])
+        prog_percent = (well+1)/(num_wells[file_num][0])
         prog_comp = np.round(prog_percent*prog_length)
 
         print('['+'#'*int(prog_comp) + '-'*(prog_length-int(prog_comp)) +']    ' + str(int(prog_comp)) + '%')
